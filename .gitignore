@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+*.env
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# Virtual environment
+venv/
+.env/
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Log files
+*.log
+
+# Django migration files
+/migrations/
+
+# Ignore secret key
+secret_key.txt
+
+# Ignore coverage reports
+.coverage
+
+# Ignore test database
+test_db.sqlite3
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

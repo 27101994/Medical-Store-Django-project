@@ -1,0 +1,13 @@
+
+
+{%extends 'base page/base.html'%}
+{%block content%}
+<h1>Create Product</h1>
+<form action="{% url 'createproduct' %}" method='post'>
+    {% csrf_token %}
+    {{form.as_div}}
+    <input type="submit" class="btn btn-success" value="submit">
+    <a class="btn btn-primary" href="{% url 'retrieveproduct' %}">Return to Product List Page</a>
+</form> <br>
+
+{%endblock%}

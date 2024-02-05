@@ -1,0 +1,17 @@
+
+
+{% extends "base page/base.html" %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <p>You are currently logged in as {{ user.username }}.</p>
+    <p>Current Date: {% now "Y-m-d H:i:s" %}</p>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-success">Log Out</button>
+      <a class="btn btn-primary" href="{% url 'retrieveproduct' %}">Return to Product List Page</a>
+    </form><br>
+  {% else %}
+    <p>You are not currently logged in.</p>
+  {% endif %}
+{% endblock %}

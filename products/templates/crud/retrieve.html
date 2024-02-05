@@ -1,0 +1,32 @@
+
+{%extends 'base page/base.html'%}
+{%block content %}
+<p>You are currently logged in as {{ user.username }}.</p>
+<p>Current Date: {% now "Y-m-d H:i:s" %}</p>
+<h1><a href="{% url 'createproduct' %}" class="btn btn-success">Create</a></h1>
+<h1>Product List</h1>
+<table border="1">
+    <tr><th>Product_id</th>
+        <th>Product_name</th>
+        <th>Product_price</th>
+        <th >Edit</th>
+        <th >Delete</th>
+    </tr>
+        
+    {% for products in product_list %}
+    <tr>
+    <td>{{products.id}}</td>
+    <td>{{ products.name }} </td> 
+    <!-- <td class="change_color">{{ products.price }}</td> -->
+    <td style="color: {% if products.price > 18 %} red {% else %} green {% endif %}">{{ products.price }}</td>
+    <td ><a href="{%url 'updateproduct' products.id %}" class="btn btn-success" value="edit" type="submit">Edit</a></td>
+    <td ><a href="{%url 'deleteproduct' products.id %}" class="btn btn-success" value="edit" type="submit">Delete</a></td>
+    {% endfor %}
+    </table>
+    <h1><a href="{% url 'product_search' %}" class="btn btn-success">Search Products Here</a></h1>
+
+    
+{% endblock %}
+
+
+

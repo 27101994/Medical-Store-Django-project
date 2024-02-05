@@ -1,0 +1,16 @@
+
+
+{% extends 'base page/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <p>You are currently logged in as {{ user.username }}.</p>
+    <p>Current Date: {% now "Y-m-d H:i:s" %}</p>
+    <h1 class="mt-3">Medical Store</h1>
+    <p>This is the home page of our medical store. You can list our products below.</p>
+    <a class="btn btn-primary" href="{% url 'retrieveproduct' %}">Product List</a>
+</div><br>
+
+
+{% endblock %}

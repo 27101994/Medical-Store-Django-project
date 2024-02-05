@@ -1,0 +1,20 @@
+
+{% extends 'base page/base.html'%}
+{%block content%}
+
+<h1>Product Search</h1>
+<form method="get" action="{% url 'product_search' %}">
+    <input type="text" name="search" value="{{ search_query }}">
+    <input type="submit" class="btn btn-success" value="Search">
+    <a class="btn btn-primary" href="{% url 'retrieveproduct' %}">Return to Product List Page</a>
+</form>
+
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - {{ product.description }} - ${{ product.price }}</li>
+    {% empty %}
+        <li>No products found.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
