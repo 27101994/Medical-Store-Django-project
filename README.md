@@ -50,7 +50,7 @@
 2. *Update Django Settings:*
 
    Update the DATABASES configuration in your Django project's settings.py file with your MySQL database credentials.
-   
+
 ## Database Migrations:
 
 To create and apply database migrations:
@@ -58,6 +58,7 @@ To create and apply database migrations:
 1. Apply migrations to create the database arrangements:
 
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    
 
