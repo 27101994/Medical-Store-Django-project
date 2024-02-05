@@ -1,4 +1,4 @@
-# Real Estate Management System
+# Medical Store Management System
 
 ## Requirements
 
