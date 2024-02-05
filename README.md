@@ -60,15 +60,15 @@ To create and apply database migrations:
    ```bash
    python manage.py makemigrations
    python manage.py migrate
-   
 
-## Run server
+## Run server:
 
-Run the development server:
+To create and apply database migrations:
+
+1. Run the development server:
 
    ```bash
    python manage.py runserver
-
 
 
 ## API Endpoints
