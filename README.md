@@ -66,7 +66,85 @@ To create and apply database migrations:
 
 Run the development server:
 
-   ```bash
+   ``bash
    python manage.py runserver
 
+
+
+## API Endpoints
+
+- *signup*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/signup
+  - Method: POST
+  - Body:
+    json
+    {
+        "username": "username",
+        "password1": "password",
+        "password1": "conform_password",
+    }
+
+- *login*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/login
+  - Method: POST
+  - Body:
+    json
+    {
+        "username": "username",
+        "password1": "password",
+    } 
+  - Response: Token_is_generated 
+    
+
+- *create_product*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/create_product
+  - Method: POST
+  - Headers:  
+    Authorization:Token your_generated_token_here
+  - Body:
+    json
+    {
+        "name": "medicine_name",
+        "description": "medicine_description",
+        "price": "medicine_price",
+    }  
+
+
+- *update_productr*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/<product_id>/update_product
+  - Method: PUT
+  - Headers:  
+    Authorization:Token your_generated_token_here
+  - Body:
+    json
+    {
+        "name": "medicine_name",
+        "description": "medicine_description",
+        "price": "medicine_price",
+    } 
+
+- *list_products*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/list_products
+  - Method: GET
+  - Headers:  
+    Authorization:Token your_generated_token_here
+    
+
+- *delete_product*
+
+  - Endpoint: http://127.0.0.1:8000/productsapi/<product_id>/delete_product
+  - Method: DELETE
+  - Headers:  
+    Authorization:Token your_generated_token_here
+
+- *search*
+  - Endpoint: http://127.0.0.1:8000/productsapi/search
+  - Method: GET
+  - Headers:  
+    Authorization:Token your_generated_token_here
 
