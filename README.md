@@ -66,7 +66,7 @@ To create and apply database migrations:
 
 Run the development server:
 
-   ``bash
+   ```bash
    python manage.py runserver
 
 
